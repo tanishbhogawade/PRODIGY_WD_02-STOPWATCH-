@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    transition: 0.4s ease;
+}
+
+.container {
+    width: 340px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    animation: fadeIn 1s ease;
+}
+
+h1 {
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+#display {
+    font-size: 38px;
+    margin: 20px 0;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+.buttons {
+    margin-bottom: 10px;
+}
+
+.buttons button {
+    padding: 10px 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+#startPause {
+    background: linear-gradient(45deg, #00c853, #64dd17);
+}
+
+#lap {
+    background: linear-gradient(45deg, #2979ff, #00b0ff);
+}
+
+#reset {
+    background: linear-gradient(45deg, #d50000, #ff1744);
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+#laps {
+    margin-top: 15px;
+    list-style: none;
+    max-height: 140px;
+    overflow-y: auto;
+}
+
+#laps li {
+    padding: 6px;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    animation: slideUp 0.3s ease;
+}
+
+.toggle {
+    margin-top: 15px;
+    font-size: 13px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.toggle:hover {
+    opacity: 1;
+}
+
+/* Light Mode */
+.light {
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    color: black;
+}
+
+.light .container {
+    background: rgba(0,0,0,0.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideUp {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
